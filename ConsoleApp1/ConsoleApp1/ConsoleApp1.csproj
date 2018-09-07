@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{95F801F6-A5C8-4E2A-BE74-6991A81859EE}</ProjectGuid>
+    <ProjectGuid>{C2C5B111-E10D-458D-9AD7-4FA8BF60D3DD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LibraryCardCatalog</RootNamespace>
-    <AssemblyName>LibraryCardCatalog</AssemblyName>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

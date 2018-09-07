@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LibraryCardCatalog")]
+[assembly: AssemblyTitle("ConsoleApp1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LibraryCardCatalog")]
+[assembly: AssemblyProduct("ConsoleApp1")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("95f801f6-a5c8-4e2a-be74-6991a81859ee")]
+[assembly: Guid("c2c5b111-e10d-458d-9ad7-4fa8bf60d3dd")]
 
 // Version information for an assembly consists of the following four values:
 //
