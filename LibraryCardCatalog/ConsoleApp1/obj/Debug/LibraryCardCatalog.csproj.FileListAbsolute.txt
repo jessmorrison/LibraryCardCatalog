@@ -1,0 +1,14 @@
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\ConsoleApp1\ConsoleApp1\bin\Debug\LibraryCardCatalog.exe.config
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\ConsoleApp1\ConsoleApp1\bin\Debug\LibraryCardCatalog.exe
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\ConsoleApp1\ConsoleApp1\bin\Debug\LibraryCardCatalog.pdb
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\ConsoleApp1\ConsoleApp1\obj\Debug\LibraryCardCatalog.csprojAssemblyReference.cache
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\ConsoleApp1\ConsoleApp1\obj\Debug\LibraryCardCatalog.csproj.CoreCompileInputs.cache
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\ConsoleApp1\ConsoleApp1\obj\Debug\LibraryCardCatalog.exe
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\ConsoleApp1\ConsoleApp1\obj\Debug\LibraryCardCatalog.pdb
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\ConsoleApp1\bin\Debug\LibraryCardCatalog.exe.config
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\ConsoleApp1\bin\Debug\LibraryCardCatalog.exe
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\ConsoleApp1\bin\Debug\LibraryCardCatalog.pdb
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\ConsoleApp1\obj\Debug\LibraryCardCatalog.csprojAssemblyReference.cache
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\ConsoleApp1\obj\Debug\LibraryCardCatalog.csproj.CoreCompileInputs.cache
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\ConsoleApp1\obj\Debug\LibraryCardCatalog.exe
+C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\ConsoleApp1\obj\Debug\LibraryCardCatalog.pdb
