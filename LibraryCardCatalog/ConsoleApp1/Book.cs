@@ -7,10 +7,20 @@ using System.Threading.Tasks;
 
 namespace LibraryCardCatalog
 {
-    [Serializable()] 
-    public class Book 
+    public class Book
     {
         public string Title { get; set; }
         public string Author { get; set; }
+        /*
+        public DateTime Published {get; set;}
+        public static int Count { get; set; }
+
+        public Book(string title, string author, DateTime published)
+        {
+            Title = title;
+            Author = author;
+            Published = published;
+            Count++;
+        }*/
     }
 }

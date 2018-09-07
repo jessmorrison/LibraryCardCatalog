@@ -27,33 +27,26 @@ namespace LibraryCardCatalog
                 result = Console.ReadLine();
                 if (result == "1")
                 {
-                    cc.ListBooks();
+                    cc.ListBooks("");
                 }
                 if (result == "2")
                 {
-
-                      cc.AddBook("New Book");
+                      cc.AddBook("");
                 }
                 if (result == "3")
                 {
                     cc.Save();
                 }
             }
-
             Console.ReadLine();
         }
 
         private static string SetFileName()
         {
-
             string Username;
             Console.WriteLine("Welcome, Please enter a username: ");
             Username = (Console.ReadLine());
             return Username;
         }
     }
-    
-
-
-
 }

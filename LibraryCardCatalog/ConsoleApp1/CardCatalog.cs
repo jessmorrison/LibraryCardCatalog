@@ -10,12 +10,15 @@ namespace LibraryCardCatalog
     class CardCatalog
     {
         private string _filename;
+        //private books;
+
+  
+        List<Book> Books = new List<Book>();
 
         public CardCatalog(string filename)
         {
             _filename = filename;
 
-            //finds folder, checks if file exists, if it doesnt, creates files
             string folderName = @"C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\";
             string pathString = System.IO.Path.Combine(folderName, "Library Card Data");
             System.IO.Directory.CreateDirectory(pathString);
@@ -47,40 +50,49 @@ namespace LibraryCardCatalog
 
         }
 
-        //private books; 
-
-
-
-
-       
-
-
-        public void ListBooks() 
+        public void ListBooks(string books) 
         {
-            /*string filename = _filename;
-            string text = System.IO.File.ReadAllText(@"C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\LibraryCardCatalog\" + filename);
-            System.Console.WriteLine("Contents of WriteText.txt = {0}", text);
-            return text;*/
+            //------UI START------
+            Console.Clear();
+            Console.WriteLine("Here is a complete List of Books In List: \n\n");
 
-            // Now we can read the serialized book ...  
-            System.Xml.Serialization.XmlSerializer reader =
+
+            //------UI END------
+            string filename;
+            filename = _filename;
+            try
+            {
+                System.Xml.Serialization.XmlSerializer reader =
                 new System.Xml.Serialization.XmlSerializer(typeof(Book));
-            System.IO.StreamReader file = new System.IO.StreamReader(
-                @"C:\Users\jessm\Documents" + "//SerializationOverview.xml");
-            Book overview = (Book)reader.Deserialize(file);
-            file.Close();
+                System.IO.StreamReader file = new System.IO.StreamReader(
+                    @"C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\Library Card Data\" + filename);
+                Book overview = (Book)reader.Deserialize(file);
+                file.Close();
 
-            Console.WriteLine(overview.Title);
+                Console.WriteLine(overview.Title + "\n" + overview.Author);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("this list contains no books. Please adds books from the main menu!");
 
+            }
             Console.ReadLine();
         }
+
+
         public void AddBook(string books)
         {
+            //------UI START------
             Console.Clear();
             Console.WriteLine("Please Enter A book Title: ");
             string bookTitle = Console.ReadLine();
             Console.WriteLine("Please Enter The Book's Author: ");
             string author = Console.ReadLine();
+            //------UI END------
+
+
+            string filename;
+            filename = _filename;
 
             Book overview = new Book();
             overview.Title = bookTitle;
@@ -88,8 +100,12 @@ namespace LibraryCardCatalog
             System.Xml.Serialization.XmlSerializer writer =
                 new System.Xml.Serialization.XmlSerializer(typeof(Book));
 
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "//SerializationOverview.xml";
-            System.IO.FileStream file = System.IO.File.Create(path);
+
+            string folderName = @"C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\";
+            string pathString = System.IO.Path.Combine(folderName, "Library Card Data");
+            pathString = System.IO.Path.Combine(pathString, filename);
+         
+            System.IO.FileStream file = System.IO.File.Create(pathString);
 
             writer.Serialize(file, overview);
             file.Close();
