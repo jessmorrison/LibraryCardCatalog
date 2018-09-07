@@ -11,6 +11,7 @@ namespace LibraryCardCatalog
         static void Main(string[] args)
         {
             Console.WriteLine("lol github");
+            Console.WriteLine("OK ONE MORE TEST LOL");
             Console.ReadLine();
         }
     }
