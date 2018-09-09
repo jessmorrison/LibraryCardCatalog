@@ -11,16 +11,22 @@ namespace LibraryCardCatalog
     {
         public string Title { get; set; }
         public string Author { get; set; }
-        /*
-        public DateTime Published {get; set;}
-        public static int Count { get; set; }
+        public int Published {get; set;}
 
-        public Book(string title, string author, DateTime published)
+        public Book()
+        {
+
+        }
+        public Book(string title, string author, int published)
         {
             Title = title;
             Author = author;
             Published = published;
-            Count++;
-        }*/
+        }
+
+        public override string ToString()
+        {
+            return $"Title is: {Title}, Author is: {Author}, Year is: {Published}";
+        }
     }
 }

@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
+
 
 namespace LibraryCardCatalog
 {
     class CardCatalog
     {
         private string _filename;
-        //private books;
-
-  
-        List<Book> Books = new List<Book>();
+        
 
         public CardCatalog(string filename)
         {
@@ -50,33 +49,35 @@ namespace LibraryCardCatalog
 
         }
 
-        public void ListBooks(string books) 
+        public void ListBooks()
         {
             //------UI START------
             Console.Clear();
             Console.WriteLine("Here is a complete List of Books In List: \n\n");
 
 
-            //------UI END------
             string filename;
+            //------UI END------
             filename = _filename;
-            try
-            {
-                System.Xml.Serialization.XmlSerializer reader =
-                new System.Xml.Serialization.XmlSerializer(typeof(Book));
-                System.IO.StreamReader file = new System.IO.StreamReader(
-                    @"C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\Library Card Data\" + filename);
-                Book overview = (Book)reader.Deserialize(file);
-                file.Close();
 
-                Console.WriteLine(overview.Title + "\n" + overview.Author);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("this list contains no books. Please adds books from the main menu!");
+            System.Xml.Serialization.XmlSerializer reader =
+            new System.Xml.Serialization.XmlSerializer(typeof(List<Book>));
+            System.IO.StreamReader file = new System.IO.StreamReader(
+                @"C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\Library Card Data\" + filename);
+            List<Book> bookList = (List<Book>)reader.Deserialize(file);
+            file.Close();
 
-            }
-            Console.ReadLine();
+
+            Console.WriteLine(bookList);
+
+           /* foreach (Book b in bookList) {
+                Console.WriteLine(bookList.ToString());
+            }*/
+        }
+            
+            
+           
+      
         }
 
 
@@ -86,20 +87,24 @@ namespace LibraryCardCatalog
             Console.Clear();
             Console.WriteLine("Please Enter A book Title: ");
             string bookTitle = Console.ReadLine();
+
             Console.WriteLine("Please Enter The Book's Author: ");
             string author = Console.ReadLine();
+
+            Console.WriteLine("Please Enter The Published Year: ");
+            int published = int.Parse(Console.ReadLine());
             //------UI END------
-
-
-            string filename;
+           
+        string filename;
             filename = _filename;
 
-            Book overview = new Book();
-            overview.Title = bookTitle;
-            overview.Author = author;
-            System.Xml.Serialization.XmlSerializer writer =
-                new System.Xml.Serialization.XmlSerializer(typeof(Book));
+            List<Book> bookList = new List<Book>();
+            bookList.Add(new Book {Title = bookTitle, Author= author, Published= published });
+           
 
+
+            System.Xml.Serialization.XmlSerializer writer =
+                new System.Xml.Serialization.XmlSerializer(typeof(List<Book>));
 
             string folderName = @"C:\Users\jessm\Documents\CodingTemple\Projects\LibraryCardCatalog\";
             string pathString = System.IO.Path.Combine(folderName, "Library Card Data");
@@ -107,7 +112,7 @@ namespace LibraryCardCatalog
          
             System.IO.FileStream file = System.IO.File.Create(pathString);
 
-            writer.Serialize(file, overview);
+            writer.Serialize(file, bookList);
             file.Close();
 
             Console.ReadLine();
